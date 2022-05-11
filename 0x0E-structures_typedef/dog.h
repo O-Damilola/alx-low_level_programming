@@ -1,18 +1,22 @@
-#include "dog.h"
-#include <stdlib.h>
+#ifndef DOG_H
+#define DOG_H
 /**
- * free_dog - frees memory of structure dogs
- * @d: pointer of structure
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-void free_dog(dog_t *d)
+* struct dog - dog data
+* @name: name of dog
+* @age: age of dog
+* @owner: name of owner dogs
+* Description: Defines metadata about the dog and type of dogs
+**/
+typedef struct dog
 {
-if (d != 0)
-{
-free(d->name);
-free(d->owner);
-free(d);
-}
-}
+	char *name;
+	float age;
+	char *owner;
+} dog_t;
+/* Additional function prototypes */
+int _putchar(char c);
+void init_dog(struct dog *d, char *name, float age, char *owner);
+void print_dog(struct dog *d);
+dog_t *new_dog(char *name, float age, char *owner);
+void free_dog(dog_t *d);
+#endif
