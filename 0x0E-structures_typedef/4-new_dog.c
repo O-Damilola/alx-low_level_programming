@@ -9,26 +9,26 @@
  */
 char *_strdup(char *str)
 {
-	int l, i;
-	char *s;
+int l, i;
+char *s;
 
-	if (str == NULL)
-		return (0);
+if (str == NULL)
+return (0);
 
-	l = 0;
-	while (*(str + l))
-		l++;
+l = 0;
+while (*(str + l))
+l++;
 
-	s = malloc(sizeof(char) * l + 1);
+s = malloc(sizeof(char) * l + 1);
 
-	if (s == 0)
-		return (0);
+if (s == 0)
+return (0);
 
-	for (i = 0; i <= l; i++)
-	{
-		*(s + i) = *(str + i);
-	}
-	return (s);
+for (i = 0; i <= l; i++)
+{
+*(s + i) = *(str + i);
+}
+return (s);
 }
 /**
  * new_dog - creates a new dog
@@ -41,26 +41,26 @@ char *_strdup(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
+dog_t *new_dog;
 
-	new_dog = malloc(sizeof(struct dog));
+new_dog = malloc(sizeof(struct dog));
 
-	if (new_dog == 0 || name == 0 || owner == 0)
-		return (0);
+if (new_dog == 0 || name == 0 || owner == 0)
+return (0);
 
-	new_dog->name = _strdup(name);
-	if (new_dog->name == 0)
-	{
-		free(new_dog);
-		return (0);
-	}
-	new_dog->age = age;
-	new_dog->owner = _strdup(owner);
-	if (new_dog->owner == 0)
-	{
-		free(new_dog);
-		free(new_dog->name);
-		return (0);
-	}
-	return (new_dog);
+new_dog->name = _strdup(name);
+if (new_dog->name == 0)
+{
+free(new_dog);
+return (0);
+}
+new_dog->age = age;
+new_dog->owner = _strdup(owner);
+if (new_dog->owner == 0)
+{
+free(new_dog);
+free(new_dog->name);
+return (0);
+}
+return (new_dog);
 }
