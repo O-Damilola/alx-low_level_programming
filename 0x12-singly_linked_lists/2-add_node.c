@@ -12,13 +12,13 @@ list_t *add_node(list_t **head, const char *str)
 list_t *new;
 size_t jupiter;
 new = malloc(sizeof(list_t));
-if(new == NULL)
+if (new == NULL)
 return (NULL);
-new -> str = strdup(str);
-for (jupiter = 0; str[jupiter] !='\0';)
+new->str = strdup(str);
+for (jupiter = 0; str[jupiter] != '\0';)
 jupiter++;
-new -> len = jupiter;
-new -> next = *head;
+new->len = jupiter;
+new->next = *head;
 *head = new;
 return (*head);
 }
