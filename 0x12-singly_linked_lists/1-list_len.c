@@ -10,7 +10,7 @@ size_t list_len(const list_t *h)
 {
 size_t jupiter = 0;
 
-while(h != NULL)
+while (h != NULL)
 {
 h = h->next;
 jupiter++;
