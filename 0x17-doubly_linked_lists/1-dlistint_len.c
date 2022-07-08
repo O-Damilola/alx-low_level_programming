@@ -18,7 +18,3 @@ size_t dlistint_len(const dlistint_t *h)
 
 	return (count);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
