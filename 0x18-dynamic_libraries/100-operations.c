@@ -1,13 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "header.h"
 
 /**
  * main - Add two numbers together.
  *
  * Return: Always 0 (Success)
  */
-int add(int a, int b)
+int add(int x, int y)
 {
-    printf("%d", (a + b));
+    printf("%d", (x + y));
     return(0);
 }
 
@@ -16,9 +18,9 @@ int add(int a, int b)
  *
  * Return: Always 0 (Success)
  */
-int sub(int a, int b)
+int sub(int x, int y)
 {
-    printf("%d", (a - b));
+    printf("%d", (x - y));
     return(0);
 }
 
@@ -27,9 +29,9 @@ int sub(int a, int b)
  *
  * Return: Always 0 (Success)
  */
-int mul(int a, int b)
+int mul(int x, int y)
 {
-    printf("%d", (a * b));
+    printf("%d", (x * y));
     return(0);
 }
 
@@ -38,9 +40,9 @@ int mul(int a, int b)
  *
  * Return: Always 0 (Success)
  */
-int div(int a, int b )
+int division(int x, int y )
 {
-    printf("%d", (a/b));
+    printf("%d", (x/y));
     return(0);
 }
 
@@ -49,8 +51,8 @@ int div(int a, int b )
  *
  * Return: Always 0 (Success)
  */
-int mod(int a, int b)
+int mod(int x, int y)
 {
-    printf("%d", a % b);
+    printf("%d", x % y);
     return(0);
 }
